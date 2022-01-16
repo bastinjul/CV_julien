@@ -106,6 +106,7 @@
               <ul>
                 <li>Angular</li>
                 <li>Springboot</li>
+                <li>Elixir Phoenix Framework</li>
               </ul>
             </li>
             <li>
@@ -186,15 +187,22 @@
             <iframe width="560" height="315" src="https://www.youtube.com/embed/0Fhjua-0Tck" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div>			
-            <p>This video gives a demonstration of real-time person tracking using sonar.  This work was done with Guillaume Neirinckx in the context of our master's thesis supervised by Peter Van Roy and Igor Kopestenski at UCL during the 2019-2020 academic year.  This work was presented in an invited talk given by Peter Van Roy on Aug. 23, 2020 at the Erlang Workshop 2020 (colocated with ICFP 2020).  The talk slides are available <a href="https://www.info.ucl.ac.be/~pvr/LivingOnTheEdge.pdf" target="_blank">here</a> and our master's thesis text is available bellow.</p>
+            <p>
+              This video gives a demonstration of real-time person tracking using sonar. This work was done with Guillaume Neirinckx in the context of our master's thesis supervised by Peter Van Roy and Igor Kopestenski at UCL during the 2019-2020 academic year. This work was presented in an invited talk given by Peter Van Roy on Aug. 23, 2020 at the Erlang Workshop 2020 (colocated with ICFP 2020).  The talk slides are available <a href="https://www.info.ucl.ac.be/~pvr/LivingOnTheEdge.pdf" target="_blank">here</a> and our master's thesis text is available bellow.
+              <br>
+              Github repositories : 
+              <ul>
+                <li><a href="https://github.com/guiste10/hera" target="_blank">Hera framework</a> : erlang framework that allows to synchronize and filter sensor data between nodes supporting erlang.</li>
+                <li><a href="https://github.com/bastinjul/sensor_fusion" target="_blank">Sensor fusion on GRiSP</a> : Application running on <a href="https://www.grisp.org/">GRiSP Board</a>. It uses Hera framework and allows to track up to two people in a room using sonars.</li>
+                <li><a href="https://github.com/bastinjul/sensor_fusion_live_view" target="_blank">Sensor fusion live view</a> : <a href="https://hexdocs.pm/phoenix_live_view/Phoenix.LiveView.html" target="_blank">Elixir phoenix live view</a> application that allows to see in a GUI the tracked people in the room.</li>
+                <li><a href="https://github.com/bastinjul/hera_synchronization" target="_blank">Hera Synchronization library</a> : Erlang library used by Hera framework in order to synchronize sensor measurement. It allows to avoid crosstak between sonars.</li>
+              </ul>
+            </p>
           </div>
         </article>
         <article>
           <div class="videoResponsive">
             <embed src="pdf/Sensor_fusion.pdf" type="application/pdf" width="100%" height="600px" />
-          </div>
-          <div>
-            <p>You can download it <a href="pdf/Sensor_fusion.pdf" target="_blank" download>here</a>.</p>
           </div>
         </article>
       </div>
