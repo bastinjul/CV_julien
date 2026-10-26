@@ -20,7 +20,7 @@ article {
   padding:0 1em;
 }
 
-section{
+section, details.collapsible {
   margin: 1em;
   padding: 1em;
 }
@@ -81,7 +81,7 @@ main {
   max-width: 1140px;
 }
 
-main section:not(:last-child) {
+main > section:not(:last-child), main > details:not(:last-child) {
   border-bottom: 1px solid #ccc;
 }
 
@@ -89,7 +89,7 @@ main section:not(:last-child) {
   text-align: center;
 }
 
-.fab {
+.fab, .far {
   border: 1px solid white;
   border-radius: 50%;
   font-size: 1.5em;
@@ -100,7 +100,7 @@ main section:not(:last-child) {
   text-align: center;
 }
 
-a .fab {
+a .fab, a .far {
   color: white;
 }
 
@@ -152,10 +152,6 @@ a .fab {
   content: "»";
   padding-right: 0.5em;
   color: #509e98;
-}
-
-.school, .job-title {
-  text-transform: capitalize;
 }
 
 .school span, .job-title span {
@@ -214,5 +210,89 @@ footer {
 
   footer {
     text-align: center;
+  }
+}
+.job-description .period {
+  color: #889499;
+  font-size: 0.9em;
+}
+
+ul.job-description li {
+  margin-bottom: 0.5em;
+}
+
+#education article + article, #experience article + article {
+  margin-top: 1em;
+}
+
+.subtitle {
+  margin-top: -1em;
+  font-size: 1.2em;
+  letter-spacing: 0.05em;
+}
+
+details.collapsible > summary {
+  cursor: pointer;
+  list-style: none;
+}
+
+details.collapsible > summary::-webkit-details-marker {
+  display: none;
+}
+
+details.collapsible > summary h3 {
+  display: inline-block;
+  margin: 0;
+}
+
+details.collapsible > summary::after {
+  content: "▸ show";
+  margin-left: 1em;
+  font-size: 0.85em;
+  color: #509e98;
+}
+
+details.collapsible[open] > summary::after {
+  content: "▾ hide";
+}
+
+details.collapsible[open] > summary {
+  margin-bottom: 1em;
+}
+
+dl.tools {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 0.2em 1.5em;
+  margin-left: 2.5em;
+}
+
+dl.tools dt {
+  font-weight: bold;
+  color: #509e98;
+}
+
+dl.tools dd {
+  margin: 0;
+}
+
+ul.books {
+  list-style-type: none;
+}
+
+ul.books > li:before {
+  content: "►";
+  padding-right: 0.5em;
+  color: #509e98;
+}
+
+@media only screen and (max-width: 576px) {
+  dl.tools {
+    display: block;
+    margin-left: 1em;
+  }
+
+  dl.tools dd {
+    margin-bottom: 0.5em;
   }
 }
